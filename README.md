@@ -255,25 +255,29 @@
    - accumulator <br>
      Penjelasan :
      ```sh
-     fitur di Apache Spark yang digunakan untuk mengumpulkan nilai-nilai dari setiap worker node yang menjalankan sebuah operasi tertentu pada sebuah RDD.
+     fitur di Apache Spark yang digunakan untuk mengumpulkan nilai-nilai dari 
+     setiap worker node yang menjalankan sebuah operasi tertentu pada sebuah RDD.
      ```
      
    - parallelize <br>
      Penjelasan :
      ```sh
-     method pada objek SparkContext yang digunakan untuk membuat sebuah RDD dari data yang sudah ada pada driver program.
+     method pada objek SparkContext yang digunakan untuk membuat sebuah RDD 
+     dari data yang sudah ada pada driver program.
      ```
      
    - lambda <br>
      Penjelasan :
      ```sh
-     fitur di Python yang digunakan untuk membuat sebuah fungsi tanpa harus menentukan nama fungsi secara eksplisit.
+     fitur di Python yang digunakan untuk membuat sebuah fungsi tanpa harus 
+     menentukan nama fungsi secara eksplisit.
      ```
      
    - value <br>
      Penjelasan :
      ```sh
-     method pada objek Accumulator yang digunakan untuk mengambil nilai akhir dari sebuah accumulator setelah diisi dengan nilai-nilai dari RDD.
+     method pada objek Accumulator yang digunakan untuk mengambil nilai akhir dari 
+     sebuah accumulator setelah diisi dengan nilai-nilai dari RDD.
      ```
      
 
@@ -281,8 +285,8 @@
    - broadcast <br>
      Penjelasan :
      ```sh
-     untuk mengirim variabel yang tidak berubah (immutable) ke setiap worker node hanya sekali, sehingga menghemat penggunaan
-     memori dan waktu komputasi.
+     untuk mengirim variabel yang tidak berubah (immutable) ke setiap worker node hanya sekali, 
+     sehingga menghemat penggunaan memori dan waktu komputasi.
      ```
      
    - list <br>
@@ -294,7 +298,8 @@
    - range <br>
      Penjelasan :
      ```sh
-     fungsi bawaan di Python yang digunakan untuk membuat urutan bilangan bulat dengan parameter awal, akhir, dan increment.
+     fungsi bawaan di Python yang digunakan untuk membuat urutan bilangan bulat 
+     dengan parameter awal, akhir, dan increment.
      ```
      
 ## Praktikum Kode 3
@@ -313,7 +318,8 @@
    - cache <br>
      Penjelasan :
      ```sh
-     untuk menyimpan RDD di memori, sehingga RDD tersebut bisa digunakan kembali tanpa harus dibaca ulang dari sumbernya.
+     untuk menyimpan RDD di memori, sehingga RDD tersebut bisa digunakan 
+     kembali tanpa harus dibaca ulang dari sumbernya.
      ```
      
    - count <br>
@@ -327,7 +333,8 @@
    - map <br>
      Penjelasan :
      ```sh
-     operasi yang diterapkan pada RDD, yang mengubah setiap elemen RDD menjadi elemen baru dengan mengikuti suatu fungsi tertentu.
+     operasi yang diterapkan pada RDD, yang mengubah setiap elemen RDD menjadi 
+     elemen baru dengan mengikuti suatu fungsi tertentu.
      ```
      
    - collect <br>
@@ -370,7 +377,8 @@
    - mapPartitionsWithIndex <br>
      Penjelasan :
      ```sh
-     method yang mengembalikan RDD baru dengan menerapkan fungsi pada setiap partisi, dengan mempertahankan indeks partisi.
+     method yang mengembalikan RDD baru dengan menerapkan fungsi pada setiap partisi, 
+     dengan mempertahankan indeks partisi.
      ```
      
    - repartition <br>
@@ -382,7 +390,8 @@
    - coalesce <br>
      Penjelasan :
      ```sh
-     method yang digunakan untuk mengurangi jumlah partisi RDD dengan menggabungkan partisi yang saling berdekatan menjadi satu.
+     method yang digunakan untuk mengurangi jumlah partisi RDD dengan menggabungkan partisi 
+     yang saling berdekatan menjadi satu.
      ```
      
    - toDebugString <br>
@@ -397,25 +406,28 @@
    - flatMap <br>
      Penjelasan :
      ```sh
-     sebuah operasi pada RDD di Spark yang bertujuan untuk "mengekspansi" baris RDD dengan memisahkan setiap baris menjadi kata-kata terpisah 
-     berdasarkan separator yang ditentukan, sehingga setiap kata yang diperoleh kemudian akan dijadikan elemen yang berbeda-beda pada RDD baru. 
-     Pada kode di atas, operasi flatMap digunakan untuk memisahkan setiap baris dalam RDD lines menjadi kata-kata terpisah dengan separator spasi (' ').
+     sebuah operasi pada RDD di Spark yang bertujuan untuk mengekspansi baris RDD dengan memisahkan setiap baris 
+     menjadi kata-kata terpisah berdasarkan separator yang ditentukan, sehingga setiap kata yang diperoleh kemudian 
+     akan dijadikan elemen yang berbeda-beda pada RDD baru. Pada kode di atas, operasi flatMap digunakan untuk 
+     memisahkan setiap baris dalam RDD lines menjadi kata-kata terpisah dengan separator spasi (' ').
      ```
      
    - reduceByKey <br>
      Penjelasan :
      ```sh
-     merupakan sebuah operasi pada RDD di Spark yang bertujuan untuk mengelompokkan pasangan kunci-nilai berdasarkan kunci, dan kemudian menjumlahkan 
-     nilai-nilai yang sesuai dengan kunci yang sama. Dalam kode di atas, operasi reduceByKey digunakan untuk menjumlahkan nilai 1 yang dihasilkan oleh 
-     operasi map pada setiap kunci kata yang sama, sehingga menghasilkan jumlah kemunculan kata tersebut pada RDD yang dihasilkan.
+     merupakan sebuah operasi pada RDD di Spark yang bertujuan untuk mengelompokkan pasangan kunci-nilai 
+     berdasarkan kunci, dan kemudian menjumlahkan nilai-nilai yang sesuai dengan kunci yang sama. Dalam kode di atas, 
+     operasi reduceByKey digunakan untuk menjumlahkan nilai 1 yang dihasilkan oleh operasi map pada setiap kunci kata yang sama, 
+     sehingga menghasilkan jumlah kemunculan kata tersebut pada RDD yang dihasilkan.
      ```
      
    - split <br>
      Penjelasan :
      ```sh
-     merupakan sebuah fungsi bawaan Python yang digunakan untuk memisahkan sebuah string menjadi beberapa bagian, berdasarkan separator yang ditentukan.
-     Pada kode diatas, fungsi split digunakan untuk memisahkan setiap baris RDD lines menjadi kata-kata terpisah dengan separator spasi (' '), 
-     sehingga setiap kata tersebut kemudian dijadikan elemen pada RDD baru setelah dilakukan operasi flatMap.
+     merupakan sebuah fungsi bawaan Python yang digunakan untuk memisahkan sebuah string menjadi beberapa bagian, 
+     berdasarkan separator yang ditentukan. Pada kode diatas, fungsi split digunakan untuk memisahkan setiap baris 
+     RDD lines menjadi kata-kata terpisah dengan separator spasi (' '), sehingga setiap kata tersebut kemudian 
+     dijadikan elemen pada RDD baru setelah dilakukan operasi flatMap.
      ```
      
      
