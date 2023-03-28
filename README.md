@@ -1,4 +1,4 @@
-##APACHE SPARK
+## APACHE SPARK
 
 <a name="readme-top"></a>
 
@@ -7,30 +7,30 @@
   <summary>Daftar Isi</summary>
   <ol>
     <li>
-      <a href="#start-spark">Memulai Spark</a>
+      <a href="#memulai-spark">Memulai Spark</a>
       <ul>
-        <li><a href="#akses-folder-spark">Akses Ke Folder Spark</a></li>
-        <li><a href="#tampil-browser">Tampilkan di Browser</a></li>
+        <li><a href="#akses-ke-folder-spark">Akses Ke Folder Spark</a></li>
+        <li><a href="#tampilkan-di-browser">Tampilkan di Browser</a></li>
       </ul>
     </li>
     <li>
-      <a href="#spark-shell">Memulai Spark Shell</a>
+      <a href="#memulai-spark-shell">Memulai Spark Shell</a>
       <ul>
-        <li><a href="#run-spark-shell">Running Spark Shell</a></li>
-        <li><a href="#run-scala">Menjalankan Kode Scala</a></li>
-        <li><a href="#tampil-scala">Tampil Kode Scala</a></li>
-        <li><a href="#multi-line">Mode Paste Secara Multi-Line</a></li>
-        <li><a href="#run-code-tampil">Menjalankan kode program Akan Tampil</a></li>
-        <li><a href="#penjelasan-kode">Penjelasan Kode Program Yang Error</a></li>
+        <li><a href="#menjalankan-spark-shell">Menjalankan Spark Shell</a></li>
+        <li><a href="#menjalankan-kode-scala">Menjalankan Kode Scala</a></li>
+        <li><a href="#tampil-kode-scala">Tampil Kode Scala</a></li>
+        <li><a href="#mode-paste-secara-multi-line">Mode Paste Secara Multi-Line</a></li>
+        <li><a href="#menjalankan-kode-program-akan-tampil">Menjalankan kode program Akan Tampil</a></li>
+        <li><a href="#penjelasan-kode-program-yang-error">Penjelasan Kode Program Yang Error</a></li>
       </ul>
     </li>
     <li>
-      <a href="#start-pyspark">Memulai PySpark</a>
+      <a href="#memulai-pyspark">Memulai PySpark</a>
       <ul>
-        <li><a href="#run-pyspark">Menjalankan PySpark</a></li>
-        <li><a href="#tampil-run-pyspark">Tampil Menjalankan PySpark</a></li>
+        <li><a href="#menjalankan-pyspark">Menjalankan PySpark</a></li>
+        <li><a href="#tampil-menjalankan-pyspark">Tampil Menjalankan PySpark</a></li>
         <li><a href="#kode-1">Kode 1</a></li>
-        <li><a href="#akses-spark-ui">Spark UI</a></li>
+        <li><a href="#akses-spark-ui">Akses Spark UI</a></li>
       </ul>
     </li>
     <li>
@@ -46,12 +46,12 @@
     <li>
       <a href="#praktikum-2">Praktikum 2</a>
       <ul>
-        <li><a href="#p-kode-1">Kode 1</a></li>
-        <li><a href="#p-kode-2">Kode 2</a></li>
-        <li><a href="#p-kode-3">Kode 3</a></li>
-        <li><a href="#p-kode-4">Kode 4</a></li>
-        <li><a href="#p-kode-5">Kode 5</a></li>
-        <li><a href="#p-kode-6">Kode 6</a></li>
+        <li><a href="#praktikum-kode-1">Praktikum Kode 1</a></li>
+        <li><a href="#praktikum-kode-2">Praktikum Kode 2</a></li>
+        <li><a href="#praktikum-kode-3">Praktikum Kode 3</a></li>
+        <li><a href="#praktikum-kode-4">PraktikumKode 4</a></li>
+        <li><a href="#praktikum-kode-5">Praktikum Kode 5</a></li>
+        <li><a href="#praktikum-kode-6">Praktikum Kode 6</a></li>
       </ul>
     </li>
   </ol>
@@ -60,105 +60,356 @@
 
 
 <!-- Memulai Spark -->
-## Start Spark
-
-[![Menjalankan Kode][images/Executing_system.png]]
+# Memulai Spark
+## Akses Ke Folder Spark
+  ```sh
+  cd /home/cloudera/spark-2.0.0-bin-hadoop2.7/sbin
+  sudo ./start-all.sh
+  ```
+![images]( images/MemulaiSpark.png )
 
 ## Tampilkan di Browser
-[![Tampilkan di Browser][images/Executing_system.png]]
+![images]( images/TampilDiBrowser.png )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
+<!-- Memulai Spark Shell-->
+# Memulai Spark Shell
+## Menjalankan Spark Shell
   ```sh
-  npm install npm@latest -g
+  spark-shell
+  ```
+![images]( images/Runningspark-shelldiCLI.png )
+
+## Menjalankan Kode Scala
+   ```sh
+   import sys.process._
+   val res = "ls /tmp" !
+   println(res)
+   ```
+
+## Tampil Kode Scala
+![images]( images/MenjalankanScalaRes.png )
+
+## Mode Paste Secara Multi-Line
+   ```sh
+   :paste
+   ```
+
+## Menjalankan kode program Akan Tampil
+![images]( images/CodeErrorJelaskan.png )
+
+## Penjelasan Kode Program Yang Error
+![images]( images/CodeErrorJelaskan.png )
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+<!-- Memulai PySpark -->
+# Memulai PySpark
+## Menjalankan PySpark
+  ```sh
+  pyspark
   ```
 
-### Installation
+## Tampil Menjalankan PySpark
+![images]( images/MenjalankanPySpark.png )
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+## Kode 1
+  * Code
+  ```sh
+  myaccum = sc.accumulator(0)
+  myrdd = sc.parallelize(range(1,100))
+  myrdd.foreach(lambda value: myaccum.add(value))
+  print myaccum.value
+  ```
+  ## HASILNYA : 
+  ![images]( images/Kode1.png )
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Akses Spark UI
 
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+![images]( images/SparkUI.png )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Praktikum 1 -->
+# Praktikum 1
+## Kode 2
+* Code
+  ```sh
+  broadcastVar = sc.broadcast(list(range(1, 100)))
+  broadcastVar.value
+  ```
+  ## HASILNYA : 
+  ![images]( images/Kode2.png )
 
-<!-- ROADMAP -->
-## Roadmap
+## Kode 3
+   - Silakan ganti sesuai letak file txt Anda yang dapat berisi teks apapun untuk diproses.
+   - Kata yang di Filter "Spark"
+  * Code
+  ```sh
+  # Get the lines from the textfile, create 4 partitions
+  access_log = sc.textFile("path/folder/anda", 4)
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+  #Filter Lines with ERROR only
+  error_log = access_log.filter(lambda x: "ERROR" in x)
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+  # Cache error log in memory
+  cached_log = error_log.cache()
+
+  # Now perform an action -  count
+  print "Total number of error records are %s" % (cached_log.count())
+
+  # Now find the number of lines with 
+  print "Number of product pages visited that have Errors is %s" % (cached_log.filter(lambda x: "product" in x).count())
+  ```
+  ## HASILNYA : 
+  ![images]( images/Kode3.png )
+  
+  ## Kode 4
+  * Code
+  ```sh
+  mylist = ["my", "pair", "rdd"]
+  myRDD = sc.parallelize(mylist)
+  myPairRDD = myRDD.map(lambda s: (s, len(s)))
+  myPairRDD.collect()
+  myPairRDD.keys().collect()
+  myPairRDD.values().collect()
+  ```
+  ## HASILNYA : 
+  ![images]( images/Kode4.png )
+  
+  ## Kode 5
+  * Code
+  ```sh
+  # Check Default Parallelism
+  sc.defaultParallelism
+
+  #Let's create a list, parallelize it and let's check the number of partitions. 
+  myList = ["big", "data", "analytics", "hadoop" , "spark"]
+  myRDD = sc.parallelize(myList)
+  myRDD.getNumPartitions()
+  
+  #To override the default parallelism, provide specific number of partitions needed while creating the RDD. In this case let's create the RDD with 6 partitions.
+  myRDDWithMorePartitions = sc.parallelize(myList,6)
+  myRDDWithMorePartitions.getNumPartitions()
+ 
+  #Let's issue an action to count the number of elements in the list.
+  myRDD.count()
+
+  #Display the data in each partition
+  myRDD.mapPartitionsWithIndex(lambda index,iterator: ((index, list(iterator)),)).collect()
+
+  #Increase number of partitions and display contents
+  mySixPartitionsRDD = myRDD.repartition(6)
+  mySixPartitionsRDD.mapPartitionsWithIndex(lambda index,iterator: ((index, list(iterator)),)).collect()
+
+  #Decrease number of partitions and display contents
+  myTwoPartitionsRDD = mySixPartitionsRDD.coalesce(2)
+  myTwoPartitionsRDD.mapPartitionsWithIndex(lambda index,iterator: ((index, list(iterator)),)).collect()
+
+  # Check Lineage Graph
+  print myTwoPartitionsRDD.toDebugString()
+  ```
+  
+  ## HASILNYA : 
+  ![images]( images/Kode5.png )
+  
+  ## Kode 6
+  * Code
+  ```sh
+  from operator import add
+  lines = sc.textFile("/path/to/README.md")
+  counts = lines.flatMap(lambda x: x.split(' ')) \
+                .map(lambda x: (x, 1)) \
+                .reduceByKey(add)
+  output = counts.collect()
+  for (word, count) in output:
+      print("%s: %i" % (word, count))
+  ```
+  ## HASILNYA : 
+  ![images]( images/Kode6.png )
+  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+<!-- Praktikum 2 -->
+# Praktikum 2
+## Praktikum Kode 1
+   - sc <br>
+     Penjelasan :
+     ```sh
+     objek SparkContext yang digunakan untuk menghubungkan kode Python dengan mesin Spark.
+     ```
+     
+   - accumulator <br>
+     Penjelasan :
+     ```sh
+     fitur di Apache Spark yang digunakan untuk mengumpulkan nilai-nilai dari setiap worker node yang menjalankan sebuah operasi tertentu pada sebuah RDD.
+     ```
+     
+   - parallelize <br>
+     Penjelasan :
+     ```sh
+     method pada objek SparkContext yang digunakan untuk membuat sebuah RDD dari data yang sudah ada pada driver program.
+     ```
+     
+   - lambda <br>
+     Penjelasan :
+     ```sh
+     fitur di Python yang digunakan untuk membuat sebuah fungsi tanpa harus menentukan nama fungsi secara eksplisit.
+     ```
+     
+   - value <br>
+     Penjelasan :
+     ```sh
+     method pada objek Accumulator yang digunakan untuk mengambil nilai akhir dari sebuah accumulator setelah diisi dengan nilai-nilai dari RDD.
+     ```
+     
 
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
+## Praktikum Kode 2
+   - broadcast <br>
+     Penjelasan :
+     ```sh
+     untuk mengirim variabel yang tidak berubah (immutable) ke setiap worker node hanya sekali, sehingga menghemat penggunaan
+     memori dan waktu komputasi.
+     ```
+     
+   - list <br>
+     Penjelasan :
+     ```sh
+     tipe data di Python yang digunakan untuk menyimpan kumpulan data dalam satu variabel.
+     ```
+     
+   - range <br>
+     Penjelasan :
+     ```sh
+     fungsi bawaan di Python yang digunakan untuk membuat urutan bilangan bulat dengan parameter awal, akhir, dan increment.
+     ```
+     
+## Praktikum Kode 3
+   - textFile <br>
+     Penjelasan :
+     ```sh
+     untuk membaca file teks dan mengubahnya menjadi RDD (Resilient Distributed Dataset) di Spark.
+     ```
+     
+   - filter <br>
+     Penjelasan :
+     ```sh
+     untuk menyaring elemen RDD dengan kriteria tertentu dengan menggunakan sebuah fungsi lambda.
+     ```
+     
+   - cache <br>
+     Penjelasan :
+     ```sh
+     untuk menyimpan RDD di memori, sehingga RDD tersebut bisa digunakan kembali tanpa harus dibaca ulang dari sumbernya.
+     ```
+     
+   - count <br>
+     Penjelasan :
+     ```sh
+     untuk menghitung jumlah elemen dalam RDD. Fungsi ini merupakan tipe action di Spark, yang mengakibatkan Spark menjalankan komputasi dan mengembalikan hasil ke 
+     driver program.
+     ```
+     
+## Praktikum Kode 4
+   - map <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - collect <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - len <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - keys <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - values <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+## Praktikum Kode 5
+   - defaultParallelism <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - getNumPartitions <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - mapPartitionsWithIndex <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - repartition <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - coalesce <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - toDebugString <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+     
+## Praktikum Kode 6
+   - flatMap <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - reduceByKey <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+   - split <br>
+     Penjelasan :
+     ```sh
+     
+     ```
+     
+     
+     
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -166,62 +417,7 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+See the LICENSE file for license rights and limitations (MIT).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email@email_client.com
-
-Project Link: [https://github.com/github_username/repo_name](https://github.com/github_username/repo_name)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-
-* []()
-* []()
-* []()
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/github_username/repo_name.svg?style=for-the-badge
-[contributors-url]: https://github.com/github_username/repo_name/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/github_username/repo_name.svg?style=for-the-badge
-[forks-url]: https://github.com/github_username/repo_name/network/members
-[stars-shield]: https://img.shields.io/github/stars/github_username/repo_name.svg?style=for-the-badge
-[stars-url]: https://github.com/github_username/repo_name/stargazers
-[issues-shield]: https://img.shields.io/github/issues/github_username/repo_name.svg?style=for-the-badge
-[issues-url]: https://github.com/github_username/repo_name/issues
-[license-shield]: https://img.shields.io/github/license/github_username/repo_name.svg?style=for-the-badge
-[license-url]: https://github.com/github_username/repo_name/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/linkedin_username
-[product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Vue.js]: https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D
-[Vue-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
