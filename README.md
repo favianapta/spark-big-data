@@ -49,7 +49,7 @@
         <li><a href="#praktikum-kode-1">Praktikum Kode 1</a></li>
         <li><a href="#praktikum-kode-2">Praktikum Kode 2</a></li>
         <li><a href="#praktikum-kode-3">Praktikum Kode 3</a></li>
-        <li><a href="#praktikum-kode-4">PraktikumKode 4</a></li>
+        <li><a href="#praktikum-kode-4">Praktikum Kode 4</a></li>
         <li><a href="#praktikum-kode-5">Praktikum Kode 5</a></li>
         <li><a href="#praktikum-kode-6">Praktikum Kode 6</a></li>
       </ul>
