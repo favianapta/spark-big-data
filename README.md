@@ -233,8 +233,11 @@
   for (word, count) in output:
       print("%s: %i" % (word, count))
   ```
-  ## HASILNYA : 
-  ![images]( images/Kode6.png )
+  ## HASIL 1: 
+  ![images]( images/Kode6.1.png )
+  
+  ## HASIL 2: 
+  ![images]( images/Kode6.2.png )
   
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -316,76 +319,77 @@
    - count <br>
      Penjelasan :
      ```sh
-     untuk menghitung jumlah elemen dalam RDD. Fungsi ini merupakan tipe action di Spark, yang mengakibatkan Spark menjalankan komputasi dan mengembalikan hasil ke 
-     driver program.
+     untuk menghitung jumlah elemen dalam RDD. Fungsi ini merupakan tipe action di Spark, 
+     yang mengakibatkan Spark menjalankan komputasi dan mengembalikan hasil ke driver program.
      ```
      
 ## Praktikum Kode 4
    - map <br>
      Penjelasan :
      ```sh
-     
+     operasi yang diterapkan pada RDD, yang mengubah setiap elemen RDD menjadi elemen baru dengan mengikuti suatu fungsi tertentu.
      ```
      
    - collect <br>
      Penjelasan :
      ```sh
-     
+     operasi yang mengembalikan seluruh elemen dari RDD ke driver program sebagai array atau list.
      ```
      
    - len <br>
      Penjelasan :
      ```sh
-     
+     fungsi yang mengembalikan jumlah karakter dalam sebuah string.
      ```
      
    - keys <br>
      Penjelasan :
      ```sh
-     
+     operasi yang mengembalikan kumpulan kunci dari setiap pasangan kunci-nilai dalam Pair RDD.
      ```
      
    - values <br>
      Penjelasan :
      ```sh
-     
+     operasi yang mengembalikan kumpulan nilai dari setiap pasangan kunci-nilai dalam Pair RDD.
      ```
      
 ## Praktikum Kode 5
    - defaultParallelism <br>
      Penjelasan :
      ```sh
-     
+     variabel yang mengembalikan jumlah default dari partisi RDD yang dibuat di SparkContext.
      ```
      
    - getNumPartitions <br>
      Penjelasan :
      ```sh
-     
+     method yang digunakan untuk mengembalikan jumlah partisi dari RDD.
      ```
      
    - mapPartitionsWithIndex <br>
      Penjelasan :
      ```sh
-     
+     method yang mengembalikan RDD baru dengan menerapkan fungsi pada setiap partisi, dengan mempertahankan indeks partisi.
      ```
      
    - repartition <br>
      Penjelasan :
      ```sh
-     
+     method yang digunakan untuk menyeimbangkan kembali data pada RDD dengan mengubah jumlah partisi.
      ```
      
    - coalesce <br>
      Penjelasan :
      ```sh
-     
+     method yang digunakan untuk mengurangi jumlah partisi RDD dengan menggabungkan partisi yang saling berdekatan menjadi satu.
      ```
      
    - toDebugString <br>
      Penjelasan :
      ```sh
-     
+     method yang digunakan untuk mengembalikan deskripsi teks dari RDD, 
+     termasuk informasi tentang partisi, ketergantungan, dan transformasi yang dijalankan pada RDD.
      ```
      
      
@@ -393,19 +397,25 @@
    - flatMap <br>
      Penjelasan :
      ```sh
-     
+     sebuah operasi pada RDD di Spark yang bertujuan untuk "mengekspansi" baris RDD dengan memisahkan setiap baris menjadi kata-kata terpisah 
+     berdasarkan separator yang ditentukan, sehingga setiap kata yang diperoleh kemudian akan dijadikan elemen yang berbeda-beda pada RDD baru. 
+     Pada kode di atas, operasi flatMap digunakan untuk memisahkan setiap baris dalam RDD lines menjadi kata-kata terpisah dengan separator spasi (' ').
      ```
      
    - reduceByKey <br>
      Penjelasan :
      ```sh
-     
+     merupakan sebuah operasi pada RDD di Spark yang bertujuan untuk mengelompokkan pasangan kunci-nilai berdasarkan kunci, dan kemudian menjumlahkan 
+     nilai-nilai yang sesuai dengan kunci yang sama. Dalam kode di atas, operasi reduceByKey digunakan untuk menjumlahkan nilai 1 yang dihasilkan oleh 
+     operasi map pada setiap kunci kata yang sama, sehingga menghasilkan jumlah kemunculan kata tersebut pada RDD yang dihasilkan.
      ```
      
    - split <br>
      Penjelasan :
      ```sh
-     
+     merupakan sebuah fungsi bawaan Python yang digunakan untuk memisahkan sebuah string menjadi beberapa bagian, berdasarkan separator yang ditentukan.
+     Pada kode diatas, fungsi split digunakan untuk memisahkan setiap baris RDD lines menjadi kata-kata terpisah dengan separator spasi (' '), 
+     sehingga setiap kata tersebut kemudian dijadikan elemen pada RDD baru setelah dilakukan operasi flatMap.
      ```
      
      
