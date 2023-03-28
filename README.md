@@ -1,8 +1,5 @@
-=======================================
-NAMA  : M. FAVIAN APTA SYAHPUTRA
-KELAS : TI - 3A
-N0    : 07
-=======================================
+##APACHE SPARK
+
 <a name="readme-top"></a>
 
 <!-- TABLE OF CONTENTS -->
@@ -12,8 +9,8 @@ N0    : 07
     <li>
       <a href="#start-spark">Memulai Spark</a>
       <ul>
-        <li><a href="#built-with">Akses Ke Folder Spark</a></li>
-        <li><a href="#built-with">Tampilkan di Browser</a></li>
+        <li><a href="#akses-folder-spark">Akses Ke Folder Spark</a></li>
+        <li><a href="#tampil-browser">Tampilkan di Browser</a></li>
       </ul>
     </li>
     <li>
@@ -27,12 +24,36 @@ N0    : 07
         <li><a href="#penjelasan-kode">Penjelasan Kode Program Yang Error</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li>
+      <a href="#start-pyspark">Memulai PySpark</a>
+      <ul>
+        <li><a href="#run-pyspark">Menjalankan PySpark</a></li>
+        <li><a href="#tampil-run-pyspark">Tampil Menjalankan PySpark</a></li>
+        <li><a href="#kode-1">Kode 1</a></li>
+        <li><a href="#akses-spark-ui">Spark UI</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#praktikum-1">Praktikum 1</a>
+      <ul>
+        <li><a href="#kode-2">Kode 2</a></li>
+        <li><a href="#kode-3">Kode 3</a></li>
+        <li><a href="#kode-4">Kode 4</a></li>
+        <li><a href="#kode-5">Kode 5</a></li>
+        <li><a href="#kode-6">Kode 6</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#praktikum-2">Praktikum 2</a>
+      <ul>
+        <li><a href="#p-kode-1">Kode 1</a></li>
+        <li><a href="#p-kode-2">Kode 2</a></li>
+        <li><a href="#p-kode-3">Kode 3</a></li>
+        <li><a href="#p-kode-4">Kode 4</a></li>
+        <li><a href="#p-kode-5">Kode 5</a></li>
+        <li><a href="#p-kode-6">Kode 6</a></li>
+      </ul>
+    </li>
   </ol>
 </details>
 
